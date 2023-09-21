@@ -1,23 +1,32 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>応募フォーム</title>
+    <title>Sample Form</title>
+    
+    <!-- 外部CSSファイルを読み込む -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <h2>応募フォーム</h2>
-    <form action="confirm.html" method="post">
-        <label for="name">お名前:</label>
-        <input type="text" id="name" name="applicant_name">
 
+<form action="/submit" method="post">
+    <div class="form-group">
+        <label for="name">氏名:</label>
+        <input type="text" id="name" name="user_name" placeholder="氏名を入力してください">
+    </div>
+    <div class="form-group">
         <label for="email">メールアドレス:</label>
-        <input type="email" id="email" name="applicant_email">
+        <input type="email" id="email" name="user_email" placeholder="example@example.com">
+    </div>
+    <div class="form-group">
+        <label for="message">メッセージ:</label>
+        <textarea id="message" name="user_message" placeholder="メッセージを入力してください"></textarea>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="送信">
+    </div>
+</form>
 
-        <label for="message">お問い合わせ内容:</label>
-        <textarea id="message" name="applicant_message"></textarea>
-
-        <input type="submit" value="確認画面へ">
-    </form>
 </body>
 </html>
